@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:layout_margin="4dp"
+    android:background="@android:color/white"
+    android:elevation="3dp">
+
+    <!-- Hình đại diện món ăn -->
+    <ImageView
+        android:id="@+id/img_dish"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:scaleType="centerCrop"
+        android:contentDescription="Hình món ăn"
+        android:src="@drawable/thumb_buncha" />
+
+    <!-- Icon ngôi sao Khuyến mãi ở góc trên phải -->
+    <ImageView
+        android:id="@+id/img_star"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignTop="@id/img_dish"
+        android:layout_alignEnd="@id/img_dish"
+        android:layout_margin="4dp"
+        android:contentDescription="Icon Khuyến Mãi"
+        android:src="@drawable/ic_star"
+        android:visibility="gone" />
+
+    <!-- Tên món ăn: Chỉ tự động cuộn chữ (Marquee) khi tên bị tràn khỏi độ rộng ô -->
+    <TextView
+        android:id="@+id/tv_dish_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img_dish"
+        android:layout_marginTop="8dp"
+        android:gravity="center_horizontal"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="#212121"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:text="Tên Món Ăn" />
+
+</RelativeLayout>

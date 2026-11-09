@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:layout_margin="8dp"
+    android:background="@android:color/white"
+    android:elevation="3dp">
+
+    <!-- Ảnh nhân vật Hero phủ hết chiều ngang màn hình -->
+    <ImageView
+        android:id="@+id/img_hero_avatar"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:scaleType="centerCrop"
+        android:contentDescription="Ảnh nhân vật Hero"
+        android:src="@drawable/thor" />
+
+    <TextView
+        android:id="@+id/tv_hero_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#212121"
+        android:text="Thor" />
+
+</LinearLayout>

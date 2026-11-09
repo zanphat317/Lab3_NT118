@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#F5F5F5">
+
+    <!-- Title: MAYDAY! MAYDAY! -->
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MAYDAY! MAYDAY!"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="#C2185B"
+        android:layout_marginBottom="6dp" />
+
+    <!-- Description: These people want to know if you're ok -->
+    <TextView
+        android:id="@+id/tv_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="These people want to know if you're ok"
+        android:textSize="15sp"
+        android:textStyle="italic"
+        android:gravity="center"
+        android:textColor="#555555"
+        android:layout_marginBottom="12dp" />
+
+    <!-- ListView chứa danh sách số điện thoại hỏi 'are you ok?' -->
+    <ListView
+        android:id="@+id/lv_messages"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="#E0E0E0"
+        android:dividerHeight="1dp"
+        android:background="@android:color/white"
+        android:elevation="2dp"
+        android:padding="4dp"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Khu vực 2 nút trả lời thủ công -->
+    <LinearLayout
+        android:id="@+id/ll_response_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="12dp">
+
+        <Button
+            android:id="@+id/btn_safe"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minHeight="48dp"
+            android:text="I am safe and well"
+            android:textSize="13sp"
+            android:backgroundTint="#2E7D32"
+            android:layout_marginEnd="6dp" />
+
+        <Button
+            android:id="@+id/btn_mayday"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minHeight="48dp"
+            android:text="MAYDAY! MAYDAY!"
+            android:textSize="13sp"
+            android:backgroundTint="#C2185B"
+            android:layout_marginStart="6dp" />
+    </LinearLayout>
+
+    <!-- Khu vực Auto Response chứa Switch -->
+    <LinearLayout
+        android:id="@+id/ll_auto_response"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:background="@android:color/white"
+        android:elevation="1dp"
+        android:layout_marginBottom="12dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Auto Response"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#212121" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/sw_auto_response"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <!-- Nút quay về màn hình chính -->
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:text="Quay về màn hình chính"
+        android:textSize="15sp"
+        android:backgroundTint="#757575" />
+
+</LinearLayout>

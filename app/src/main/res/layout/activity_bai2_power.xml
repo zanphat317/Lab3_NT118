@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="#F5F5F5"
+    android:gravity="center_horizontal">
+
+    <!-- Tiêu đề Bài 2 -->
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="POWER STATE RECEIVER"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="#E65100"
+        android:layout_marginBottom="16dp" />
+
+    <!-- TextView hướng dẫn -->
+    <TextView
+        android:id="@+id/tv_instruction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Theo dõi trạng thái sạc pin"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        android:gravity="center"
+        android:textColor="#555555"
+        android:padding="10dp"
+        android:background="#FFF3E0"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Icon trạng thái pin -->
+    <ImageView
+        android:id="@+id/img_battery_status"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:contentDescription="Battery Status Icon"
+        android:src="@drawable/ic_power_disconnected"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Khu vực hiển thị trạng thái hiện tại -->
+    <TextView
+        android:id="@+id/tv_power_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Trạng thái hiện tại: Không sạc"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="#B71C1C"
+        android:padding="14dp"
+        android:background="#FFCDD2"
+        android:layout_marginBottom="16dp" />
+
+    <!-- TextView giải thích sự kiện vừa nhận được -->
+    <TextView
+        android:id="@+id/tv_event_explanation"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Receiver đã được đăng ký trong AndroidManifest.xml để tự động lắng nghe sự kiện cắm/rút sạc từ hệ thống (kèm Toast thông báo)."
+        android:textSize="14sp"
+        android:textColor="#424242"
+        android:padding="14dp"
+        android:background="@android:color/white"
+        android:elevation="2dp"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Nút quay về màn hình chính -->
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:text="Quay về màn hình chính"
+        android:textSize="15sp"
+        android:backgroundTint="#757575" />
+
+</LinearLayout>
